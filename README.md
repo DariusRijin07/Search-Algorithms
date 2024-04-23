@@ -19,13 +19,52 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
-
+Develeoped by :Darius Rijin I
+Register number:212223230037
+def search(array,key,n):
+    for i in range(0,n):
+        if key==array[i]:
+            return i
+            
+    
+    return -1
+array=eval(input())
+key=int(input())
+array.sort()
+n=len(array)
+print(array)
+result=search(array,key,n)
+if result==-1:
+  print("Element not found")
+else:
+ print("Element found at index: ",result)
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-
+Develeoped by :Darius Rijin I
+Register number:212223230037
+def binary(array,key,low,high):
+    while(low<=high):
+        mid=low+(high-low)//2
+        if array[mid]==key:
+            return mid
+        elif array[mid]<key:
+            low=mid+1
+        elif array[mid]>key:
+            high=mid-1
+    return -1
+array=eval(input())
+key=int(input())
+array.sort()
+low,high=0,len(array)-1
+print(array)
+result=binary(array,key,low,high)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 
 
@@ -33,7 +72,28 @@ ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
+Develeoped by :Darius Rijin I
+Register number:212223230037
+def binary(array,key,low,high):
+    if high>=low:
+        mid=low+(high-low)//2
+        if array[mid]==key:
+            return mid
+        elif array[mid]<key:
+            return binary(array,key,mid+1,high)
+        elif array[mid]>key:
+            return binary(array,key,low,mid-1)
+    return -1
+array=eval(input())
+key=int(input())
+array.sort()
+low,high=0,len(array)-1
+print(array)
+result=binary(array,key,low,high)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 
 
@@ -42,8 +102,11 @@ iii)	# Find the element in a list using Binary Search (recursive Method).
 ## Sample Input and Output
 
 
+![Python 1](https://github.com/DariusRijin07/Search-Algorithms/assets/138849120/921a9917-da78-45ce-a521-3b8c471f18c8)
 
 
+![Python 2](https://github.com/DariusRijin07/Search-Algorithms/assets/138849120/bc7e41ef-c826-436f-93ad-3a11cd8f373e)
+![Python 3](https://github.com/DariusRijin07/Search-Algorithms/assets/138849120/7f13a907-4c98-4f7d-8148-e2115bc116f9)
 
 
 ## Result
